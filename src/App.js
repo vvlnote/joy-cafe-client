@@ -5,17 +5,6 @@ import ATable from './components/atable';
 
 class App extends Component {
 
-
-  componentDidMount() {
-    fetch('http://localhost:3001/dishes')
-    .then(response => response.json())
-    .then(dishes => { 
-      console.log(dishes)
-      return fetch('http://localhost:3001/ingredients')
-    })
-    .then(r => r.json())
-    .then(ingredients => console.log(ingredients))
-  }
   
   placeOrder(tableName) {
     console.log('placeOrder', tableName);
