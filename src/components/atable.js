@@ -19,7 +19,6 @@ class ATable extends Component {
 		return (
 			<div style={this.aTableStyle}>
 				<h3>Table {this.props.name}</h3>
-				{console.log(`/Orders/table${this.props.name}`)}
 				<Link to={`/Orders/table${this.props.name}`}>
 					<button>Order</button>
 				</Link>

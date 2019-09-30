@@ -3,7 +3,6 @@ const BASE_URL = "http://localhost:3001";
 
 export function fetchDishes() {
 	return (dispatch) => {	
-	//fetch('http://localhost:3001/dishes')
 	fetch(`${BASE_URL}/dishes`)
     .then(resp => resp.json())
     .then(dishes => restructuredDishesData(dishes))

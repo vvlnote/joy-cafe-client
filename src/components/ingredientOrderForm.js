@@ -17,14 +17,13 @@ class IngredientOrderForm extends Component {
 
 	handleOnSubmit = (event) => {
 		event.preventDefault();
-		debugger;
+
 		let obj = this.props.ingredient;
 		obj.available_amount = obj.available_amount + parseFloat(this.state.amount);
 		if (obj.available_amount > obj.low_amount_alert){
 			obj.alert = false;
 		}
-		console.log(obj);
-		debugger;
+
 		this.props.updateIngredientIneventory(obj);
 		this.setState({amount: ''});
 		this.props.hideForm();

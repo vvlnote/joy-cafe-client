@@ -23,7 +23,6 @@ class InventoryContainer extends Component {
 	}
 
 	handleOnClick(ingredient, event){
-		debugger;
 		console.log(ingredient);
 		this.setState({
 			showForm: true,
@@ -32,7 +31,6 @@ class InventoryContainer extends Component {
 	}
 
 	hideForm =() =>{
-		debugger;
 		this.setState({showForm: false});
 	}
 
@@ -57,7 +55,6 @@ class InventoryContainer extends Component {
 	}
 
 	render() {
-		debugger;
 	    return (
 	      <div>
 	      	{console.log(this.state.showForm)}
