@@ -26,6 +26,7 @@ export function fetchIngredients() {
 }
 
 export function placeOrder(id, data) {
+	console.log('C')
 	return (dispatch) => {
 		fetch(`${BASE_URL}/dishes/${id}`, {
 			method: 'PUT',
@@ -33,10 +34,11 @@ export function placeOrder(id, data) {
 			body: JSON.stringify(data)
 		})
 		.then(response => response.json())
-		.then(dish => dispatch({
-			type: 'UPDATE_A_DISH',
-			payload: dish
-		}))
+		.then(dish => {
+			dispatch({
+					type: 'UPDATE_A_DISH',
+					payload: dish
+				})})
 	}
 }
 

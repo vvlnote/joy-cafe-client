@@ -19,7 +19,7 @@ class AnOrder extends Component {
 			<h3>Order Of {this.props.order.tableId}</h3>
 			{orderDetail}
 			<hr/>
-			<span>Total: ${totalPrice}</span>
+			<span>Total: ${totalPrice.toFixed(2)}</span>
 			<button onClick={this.onHandlePayment}>Pay</button>
 			</div>
 		)

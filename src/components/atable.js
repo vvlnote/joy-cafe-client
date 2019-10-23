@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 class ATable extends Component {
 
-
-	aTableStyle = {
+	
+	aTableStyle = { 
 		postion: 'relative',
 		left: 'auto',
 		display: 'inline-block',
@@ -12,7 +12,7 @@ class ATable extends Component {
 		height: '80px',
 		width: '150px',
 		textAlign: 'center'
-	};
+	}
 
 
 	render() {

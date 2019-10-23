@@ -51,7 +51,7 @@ export default function cafeReducer(state = initialState, action ) {
 			if (action.payload.alert){ 
 				alert = true;
 			}
-			return {...state, inventory: inventory, alert: alert};
+			return {...state, inventory, alert: alert};
 
 		default: 
 			return state;

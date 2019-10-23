@@ -40,10 +40,10 @@ class DishesContainer extends Component {
 	}
 
 	onHandlePlaceOrder = () => {
-		console.log("in onHandlePlaceOrder");
+		//console.log("in onHandlePlaceOrder");
 		this.setState({displayOrders: true})
 		this.setState({disablePlaceOrderButton: false})
-		console.log(this.orders);
+		//console.log(this.orders);
 		let checkOutReceipts = [];
 		let ingredientsUsage = [];
 		this.orders.forEach((e) => {
@@ -53,7 +53,8 @@ class DishesContainer extends Component {
 				ingredientsUsage = this.collectIngredientUsage(ingredientsUsage, e.orders, dish);
 				let rObj = {dishName: dish.name, price: dish.price, orders: e.orders};
 				checkOutReceipts.push(rObj);
-				setTimeout(() => {this.props.placeOrder(e.dishId, dish)},3000);
+				setTimeout(() => {this.props.placeOrder(e.dishId, dish)
+				},3000);
 			}
 
 		})

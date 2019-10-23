@@ -29,6 +29,10 @@ class IngredientOrderForm extends Component {
 		this.props.hideForm();
 	}
 
+	handleClickCancel = () => {
+
+	}
+
 	render() {
 		return (
 			<div>
@@ -36,6 +40,7 @@ class IngredientOrderForm extends Component {
 				<form onSubmit={this.handleOnSubmit}>
 					<input type="text" name='amount' value={this.state.amount} onChange={this.handleOnChange}/>
 					<input type='submit'/>
+					<button onClick={this.handleClickCancel}>Cancel</button>
 				</form>
 			</div>
 
